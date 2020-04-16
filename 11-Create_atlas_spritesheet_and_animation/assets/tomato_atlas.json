@@ -1,0 +1,294 @@
+{
+    "frames": [
+        {
+            "filename": "evil_tomato_walk_0",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 0,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "evil_tomato_walk_1",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 16,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "evil_tomato_walk_2",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 32,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "evil_tomato_walk_3",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 48,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "evil_tomato_walk_4",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 64,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "evil_tomato_walk_5",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 80,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "evil_tomato_walk_6",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 96,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "evil_tomato_walk_7",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 112,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "tomate_idle_0",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 0,
+                "y": 25
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "tomate_idle_1",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 16,
+                "y": 25
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "tomate_idle_2",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 32,
+                "y": 25
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "tomate_idle_3",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 48,
+                "y": 25
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "tomate_idle_4",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 64,
+                "y": 25
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "tomate_idle_5",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 80,
+                "y": 25
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "tomate_idle_6",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 96,
+                "y": 25
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "tomate_idle_7",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 112,
+                "y": 25
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "tomate_agachado_0",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 0,
+                "y": 50
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "tomate_agachado_1",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 16,
+                "y": 50
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "tomate_agachado_2",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 32,
+                "y": 50
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "tomate_agachado_3",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 48,
+                "y": 50
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "tomate_agachado_4",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 64,
+                "y": 50
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "tomate_agachado_5",
+            "frame": {
+                "w": 16,
+                "h": 25,
+                "x": 80,
+                "y": 50
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        }
+    ],
+    "meta": {
+        "description": "Atlas generado con Atlas Packer Gamma V2",
+        "web": "https://gammafp.github.io/atlas-packer-phaser/"
+    }
+}
