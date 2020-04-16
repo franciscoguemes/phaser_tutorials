@@ -1,4 +1,5 @@
 import Bootloader from './Bootloader.js';
+import Scene_play from './scenes/scene_play.js';
 
 const config = {
     width: 640,
@@ -8,7 +9,8 @@ const config = {
         default: "arcade"
     },
     scene: [
-        Bootloader
+        Bootloader,
+        Scene_play
     ]
 }
 
