@@ -30,11 +30,48 @@ class Scene_play extends Phaser.Scene{
         // Physics
         this.physics.add.collider(this.ball, this.left, this.collidePallete, null, this);
         this.physics.add.collider(this.ball, this.right, this.collidePallete, null, this);
+
+        // Controls right pallete
+        this.cursor = this.input.keyboard.createCursorKeys();
+
+        // Controls left pallete
+        this.cursor_w = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
+        this.cursor_s = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S)
+    }
+
+    update(){
+        if(this.ball.x < 0 || this.ball.x > this.sys.game.config.width){
+            this.ball.setPosition(this.sys.game.config.width / 2,  this.sys.game.config.height / 2);
+        }
+
+        // Control of the right pallete
+        if(this.cursor.down.isDown){
+            this.right.body.setVelocityY(300);
+        }else if(this.cursor.up.isDown){
+            this.right.body.setVelocityY(-300);
+        }else {
+            this.right.body.setVelocityY(0);
+        }
+
+        // Control of the left pallete
+        if(this.cursor_s.isDown){
+            this.left.body.setVelocityY(300);
+        }else if(this.cursor_w.isDown){
+            this.left.body.setVelocityY(-300);
+        }else {
+            this.left.body.setVelocityY(0);
+        }
     }
 
     collidePallete(){
-        
+        /**
+         * TODO: Instead of changing the direction randomly, do it according to the point where
+         * the ball collide with the pallete.
+         */
+        this.ball.setVelocityY(Phaser.Math.Between(-120, 120));
     }
+
+
 
 }
 
