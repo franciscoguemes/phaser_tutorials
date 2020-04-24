@@ -1,0 +1,24 @@
+{
+    "spritemap": {
+        "sandwich_1": {
+            "start": 0,
+            "end": 1.593,
+            "loop": false
+        },
+        "sandwich_2": {
+            "start": 1.593,
+            "end": 3.186,
+            "loop": false
+        },
+        "sandwich_3": {
+            "start": 3.186,
+            "end": 4.779,
+            "loop": false
+        },
+        "sandwich_4": {
+            "start": 4.779,
+            "end": 6.372,
+            "loop": false
+        }
+    }
+}
