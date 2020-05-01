@@ -11,7 +11,7 @@ const config = {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH
     },
-    backgroundColor: "#d35400",
+    // backgroundColor: "#d35400",
     pixelArt: true,
     scene: [
         Bootloader,

@@ -5,10 +5,16 @@ class Intro extends Phaser.Scene{
         super({key: 'Intro'});
     }
 
-    preload(){
-        console.log('Scene: InBuildingstro');
 
+    preload(){
+        console.log('Scene: Intro');
+    }
+
+    init(){
         this.camera = this.cameras.main;
+        this.audioMega = this.sound.add('megamanAudio', {
+            loop: false
+        });
     }
 
     create(){
@@ -18,6 +24,54 @@ class Intro extends Phaser.Scene{
             '  DIFFICULT\n\n',
             'PRESS START'
         ];
+
+        const logo = this.add.image(
+            this.scale.width / 2, 
+            -1195,
+            'logo'
+        )
+        .setScale(2);
+
+        const menuText = this.add.bitmapText(
+            90,
+            -1070,
+            'font',
+            menuTextArray
+        )
+
+        const selectorPos = [0, 30];
+
+        const selector = this.add.image(
+            100,
+            -1063 + selectorPos[0],
+            'selector'
+        )
+        .setScale(2);
+
+        const cursor = this.input.keyboard.createCursorKeys();
+        cursor.down.on('down', () => {
+            selector.y = -1063 + selectorPos[1];
+        });
+        cursor.up.on('down', () => {
+            selector.y = -1063 + selectorPos[0];
+        });
+
+        this.tweens.add({
+            targets: selector,
+            ease: (e) => Math.round(e),
+            repeat: -1,
+            alpha: 0
+        });
+
+        const menuContainer = this.add.container(0,0);
+
+        menuContainer.add([
+            selector,
+            logo,
+            menuText
+        ]);
+
+        menuContainer.setAlpha(0);
 
         const creditsTextArray = [
             '1998 CAPCOM CO. LTD\n',
@@ -50,13 +104,14 @@ class Intro extends Phaser.Scene{
 
         //Story line text
         const historyText = this.add.bitmapText(
-            0,
+            0,            
             0,
             'font',
             textArray.text[0]
         )
         .setCenterAlign()
-        .setDepth(2);
+        .setDepth(2)
+        .setAlpha(0);
 
         Phaser.Display.Align.In.BottomCenter(
             historyText,
@@ -76,7 +131,8 @@ class Intro extends Phaser.Scene{
         //Background
         const background = this.add.image(0, -104, 'objects', 'background')
         .setScale(2)
-        .setOrigin(0);
+        .setOrigin(0)
+        .setAlpha(0);
         background.setScrollFactor(0,0.7);
 
         const buildings = new Building(this, 'objects', 12);
@@ -94,8 +150,59 @@ class Intro extends Phaser.Scene{
         megaman.anims.play('idle');
 
 
-        //Move the camera
-        this.camera.pan(this.scale.width / 2, -1150, 1000, 'Quad.easeIn' );
+        const timeline = this.tweens.createTimeline();
+
+        timeline.add({
+            targets: creditsText,
+            alpha: 0,
+            delay: 3000,
+            duration: 500,
+            onComplete: () => {
+                this.cameras.main.flash(500);
+                this.audioMega.play();
+            }
+        });
+
+        timeline.add({
+            targets: [background, ...buildings.getChildren()],
+            alpha: 1,
+            duration: 1000
+        })
+
+
+        timeline.add({
+            targets: [historyText],
+            alpha: 1,
+            repeat: textArray.text.length -1,
+            hold: 2900,
+            repeatDelay: 100,
+            yoyo: true,
+            onRepeat: () => {
+                textArray.count ++;
+                historyText.setText(textArray.text[textArray.count]);
+
+                Phaser.Display.Align.In.BottomCenter(
+                    historyText,
+                    this.add.zone(0, -60, 512, 480).setOrigin(0)
+                );
+            },
+            onComplete: () => {
+                //Move the camera
+                this.camera.pan(this.scale.width / 2, -1150, 10000, 'Quad.easeIn' );
+            }
+
+        });
+
+        timeline.add({
+            targets: [menuContainer],
+            delay: 1100,
+            duration: 1,
+            alpha: 1
+        });
+
+        timeline.play();
+
+        
     }
 
     update(){

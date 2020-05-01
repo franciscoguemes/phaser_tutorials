@@ -32,7 +32,7 @@ class Building extends Phaser.GameObjects.Group{
 
         this.children.iterate( x => {
             x.setScale(2);
-            x.setAlpha(1);
+            x.setAlpha(0);
             x.setScrollFactor(0.9);
         })
     }
